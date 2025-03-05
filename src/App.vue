@@ -114,9 +114,9 @@ export default {
       }
 
       this.loading = true;
-      try {
+      try { 
         // Make sure this URL matches your Flask server address/port
-        const response = await axios.post("http://127.0.0.1:5001/analyze", { urls });
+        const response = await axios.post("https://backend.mijue.xyz/analyze", { urls });
         
         this.videoResults = response.data.video_results;
 
