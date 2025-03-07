@@ -133,7 +133,7 @@ export default {
           }
         }
       } catch (err) {
-        this.error = "Failed to analyze videos. Check your Flask server or video URLs.";
+        this.error = "Invalid Videos";
       }
       this.loading = false;
     }
