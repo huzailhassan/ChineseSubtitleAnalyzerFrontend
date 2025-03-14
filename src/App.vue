@@ -168,7 +168,7 @@ export default {
       this.loadingVideos = true; // Show loading spinner
 
       try {
-        const response = await axios.get("http://localhost:5001/search", {
+        const response = await axios.get("https://backend.mijue.xyz/search", {
           params: { category }
         });
 
@@ -224,7 +224,7 @@ export default {
 
       this.loading = true;
       try {
-        const response = await axios.post("http://localhost:5001/analyze", { urls });
+        const response = await axios.post("https://backend.mijue.xyz/analyze", { urls });
 
         this.totalWords = response.data.total_common_words.map(([word, count]) => ({ word, count }));
 
